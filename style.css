@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100vh;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 400px;
+    max-width: 400px;
+}
+
+.main__logo {
+    margin-bottom: 50px;
+}
+
+.main__form {
+    margin-top: 100px;
+}
+
+.input {
+    background-color: #fff;
+    border: none;
+    border-bottom: 3px solid #3900B1;
+    font-size: 28px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #3900B1;
+    padding: 10px 25px;
+    outline: none;
+    margin: 5px 0;
+    min-width: 100%;
+    max-width: 100%;
+}
+
+.input::placeholder {
+    color: rgb(57, 0, 177, 0.25);
+}
+
+.button {
+    font-size: 28px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 15px 32px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button_blue {
+    background-color: #3900B1;
+    border: 3px solid #3900B1;
+    color: #fff;
+}
+
+.button_white {
+    color: #3900B1;
+    border: 3px solid #3900B1;
+    background-color: #fff;
+}
+
+.button_purple {
+    background-color: #8320ab;
+    border: 3px solid #8320ab;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.button_purple:hover {
+    color: #000;
+    background-color: #fff;
+}
+
+.form__button {
+    margin-top: 50px;
+}
+
+.show {
+    display: flex;
+}
+
+.hide {
+    display: none;
+}

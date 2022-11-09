@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <title>SOCIUM</title>
+</head>
+<body>
+    <main class="main">
+        <img class="main__logo" src="./images/purple_logo.svg" alt="">
+        <div class="buttons main__buttons">
+            <button class="button button_blue login-button">Вход</button>
+            <button class="button button_white registration-button">Регистрация</button>
+        </div>
+        <form class="form main__form login-form show" action="#" method="POST">
+            <input class="input" type="email" name="email" placeholder="e-mail">
+            <input class="input" type="password" name="password" placeholder="пароль">
+            <button class="button button_purple form__button">Войти</button>
+        </form>
+        <form class="form main__form registration-form hide" action="#" method="POST">
+            <input class="input" type="text" name="name" placeholder="имя">
+            <input class="input" type="text" name="surname" placeholder="фамилия">
+            <input class="input" type="email" name="email" placeholder="e-mail">
+            <input class="input" type="password" name="password" placeholder="пароль">
+            <button class="button button_purple form__button">Зарегестрироваться</button>
+        </form>
+    </main>
+    <script>
+        function change(object_1, object_2, button_1, button_2) {
+            $(object_1).removeClass('hide');
+            $(object_1).addClass('show');
+            $(object_2).removeClass('show');
+            $(object_2).addClass('hide');
+        }
+
+        function changeStyleSheet(button_1, button_2) {
+            $(button_1).css({
+                'color': '#fff',
+                'background-color': '#3900B1'
+            });
+            $(button_2).css({
+                'color': '#3900B1',
+                'background-color': '#fff'
+            });
+        }
+        $('.login-button').click(() => {
+            change('.login-form', '.registration-form');
+            changeStyleSheet('.login-button', '.registration-button');
+        });
+        $('.registration-button').click(() => {
+            change('.registration-form', '.login-form');
+            changeStyleSheet('.registration-button', '.login-button');
+        });
+    </script>
+</body>
+</html>
